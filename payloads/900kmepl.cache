@@ -1,0 +1,53 @@
+CACHE MANIFEST 
+# Kameleon 900V4.6 Payloads Cache
+# 01/30/2022-14:27:00.78 
+
+900.html
+bg.jpg
+btn.css
+cache.html
+exploit.js
+favicon.ico
+frontend.js
+index.html
+index.js
+int64.js
+kexploit-auto.js
+kexploit-launcher.js
+kexploit.js
+malloc.js
+mira.js
+netcat.js
+payload.js
+photo-backup.bin
+pl_appdumper.bin
+pl_backup.bin
+pl_disableaslr.bin
+pl_disableupdates.bin
+pl_enableupdates.bin
+pl_exitidu.bin
+pl_ftp.bin
+pl_historyblocker.bin
+pl_kerneldumper.bin
+pl_moduledumper.bin
+pl_OrbisToolbox.bin
+pl_ps4debug.bin
+pl_restore.bin
+pl_todex.bin
+pl_webrte.bin
+relocator.js
+restore_photo.bin
+rop.js
+rop_sleirs.js
+syscalls.js
+syscalls2.js
+webkit.js
+
+NETWORK:
+*
+
+SETTINGS:
+prefer-online:
+
+# Date: 06/02/2022  10:00:00.00
+

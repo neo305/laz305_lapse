@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PS4 Jailbreak</title>
+    <script src="./bundle.js"></script>
+    <style>
+      body {
+        background: url("../4.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #cccccc;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      #console {
+        font-family: monospace;
+        background-color: #1e1e1e;
+        color: #cccccc;
+        border: 1px solid #3c3c3c;
+        padding: 12px;
+        border-radius: 6px;
+        margin-top: 20px;
+        text-align: left;
+      }
+      #jailbreakBtn {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        background: #007acc;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      #jailbreakBtn:disabled {
+        background: #555555;
+        color: #aaaaaa;
+        cursor: not-allowed;
+      }
+      #jailbreakBtn:not(:disabled):hover {
+        background: #005a9e;
+      }
+      footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
+      }
+    </style>
+    <script>
+      if ((window.applicationCache.status == '0') || (window.applicationCache.status == '3')) { // 0: UNCACHED, 3: IDLE
+        window.location.replace("cache.html");
+      }
+    </script>
+  </head>
+  <body>
+    <h2>PSFree: A PS4 9.00 Exploit Chain</h2>
+    <div>
+	<label class="switch">
+  <input type="checkbox" id="checkbox2" onclick="checkthebox2()">
+  <span class="slider round"><span class="on">AutoLoadGHEN ON</span><span class="off">AutoLoadGHEN OFF</span></span>
+</label>
+      <button id="jailbreakBtn">Start Jailbreak</button>
+    </div>
+    <pre id="console"></pre>
+    <footer>
+      UI Designed by <strong>Feyzee</strong>
+    </footer>
+  </body>
+  <script>
+  // Onload Check
+	}
+  var secondcheck = localStorage.getItem("CheckBOX2")
+  if (secondcheck == "true"){
+    document.getElementById("checkbox2").checked = true
+  }else {
+    document.getElementById("checkbox2").checked = false
+	}
+	}
+  function checkthebox2() {
+    var chkBox = document.getElementById("checkbox2")
+    if (chkBox.checked == true){
+      var checkbox_on = document.getElementById("checkbox2").checked = true
+      localStorage.setItem("CheckBOX2", checkbox_on)
+      LoadedMSG="GoldHEN 2.3 Auto ON  !!!";
+      autopl();
+    }else if (chkBox.checked == false) {
+      var checkbox_off = document.getElementById("checkbox2").checked = false
+      localStorage.setItem("CheckBOX2", checkbox_off)
+      LoadedMSG="GoldHEN 2.3 Auto OFF  !!!";
+      autopl();
+    }
+    // Logging utility
+    const outputConsole = document.getElementById("console");
+    window.log = (msg) => { outputConsole.textContent += msg + "\n"; };
+    // Event definitions
+    addEventListener('unhandledrejection', event => {
+      const reason = event.reason;
+      alert(
+        'Unhandled rejection\n'
+        + `${reason}\n`
+        + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+        + `${reason.stack}`
+      );
+    });
+    addEventListener('error', event => {
+      const reason = event.error;
+      alert(
+        'Unhandled error\n'
+        + `${reason}\n`
+        + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+        + `${reason.stack}`
+      );
+      return true; // Used for not to show error message on console
+    });
+    // Button click
+    document.getElementById("jailbreakBtn").addEventListener("click", () => {
+      // Disable to prevent double click
+      document.getElementById("jailbreakBtn").disabled = true;
+      outputConsole.textContent = ""; // Clear console log
+      try {
+        doJBwithPSFreeLapseExploit();
+      } catch (error) {
+        window.log("An error occured during exploit: " + error);
+      }
+    });
+  </script>
+</html>
